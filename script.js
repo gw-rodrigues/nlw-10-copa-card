@@ -1,7 +1,6 @@
-function changeCard(event) {
-  const card = event.currentTarget.getAttribute('data-card')
-  event.currentTarget.setAttribute(
-    'data-card',
-    card === 'explorer' ? 'ignite' : 'explorer',
-  )
+const card = document.getElementById('card')
+
+function changeCard() {
+  const type = card.getAttribute('data-card')
+  card.setAttribute('data-card', type === 'explorer' ? 'ignite' : 'explorer')
 }
