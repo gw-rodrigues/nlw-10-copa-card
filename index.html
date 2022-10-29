@@ -21,13 +21,19 @@
     <header class="logo">
       <img src="./assets/logo.svg" alt="Logo nlw copa" />
     </header>
-    <main id="card" data-card="explorer" onclick="changeCard(event)">
+    <main id="card" data-card="explorer" onclick="changeCard()">
       <div class="card-header">
         <div class="card-logo"><img src="./assets/logo-dev.svg" alt="" /></div>
-        <div class="card-techs">
+        <div class="card-techs" data-card-explorer>
           <img src="./assets/tech-html.svg" alt="html" />
           <img src="./assets/tech-css.svg" alt="css" />
           <img src="./assets/tech-github.svg" alt="github" />
+        </div>
+        <div class="card-techs" data-card-ignite>
+          <img src="./assets/tech-react.svg" alt="react" />
+          <img src="./assets/tech-node.svg" alt="node" />
+          <img src="./assets/tech-typescript.svg" alt="typescript" />
+          <img src="./assets/tech-tailwind.svg" alt="tailwind" />
         </div>
       </div>
       <div class="card-photo">
@@ -35,9 +41,13 @@
         <img src="https://github.com/gw-rodrigues.png" alt="Profile image" />
       </div>
       <div class="card-info">
-        <div class="card-type">
+        <div class="card-type" data-card-explorer>
           <span>Trilha Explorer</span>
           <img src="./assets/explorer-logo.svg" alt="Explorer logo" />
+        </div>
+        <div class="card-type" data-card-ignite>
+          <span>Trilha Ignite</span>
+          <img src="./assets/ignite-logo.svg" alt="Ignite logo" />
         </div>
         <div class="card-description">
           <h1>Gleydson W. Rodrigues</h1>
