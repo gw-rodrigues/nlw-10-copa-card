@@ -1,0 +1,7 @@
+#unused assets
+assets/card-purple.svg
+
+#video files
+*.mp4
+
+.DS_Store
