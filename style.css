@@ -3,8 +3,8 @@
   --purple-dark: #373d98;
   --green: #047c3f;
   --green-dark: #185b34;
-  --blue: ;
-  --blue-dark: ;
+
+  --x: 0deg;
 }
 
 * {
@@ -51,6 +51,8 @@ header {
   background: url(./assets/card-espiral.svg) no-repeat;
   user-select: none;
   cursor: pointer;
+  transform: perspective(264px) rotateY(var(--x));
+  transition: transform 0.1s;
 }
 
 [data-card='explorer'] {
@@ -188,10 +190,10 @@ header {
   height: 32.5px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 
-  padding: 6px 0 0 11.5px;
+  padding: 6px 16.5px 0 0;
   gap: 5px;
 
   position: relative;
