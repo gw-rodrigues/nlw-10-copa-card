@@ -3,6 +3,7 @@
   --purple-dark: #373d98;
   --green: #047c3f;
   --green-dark: #185b34;
+  --yellow: #f7dd43;
 
   --x: 0deg;
 }
@@ -69,6 +70,7 @@ header {
   height: 60px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 [data-card='explorer'] .card-header {
@@ -160,6 +162,36 @@ header {
     hue-rotate(350deg) brightness(101%) contrast(95%);
 }
 
+.tips {
+  width: 200px;
+  position: absolute;
+  z-index: 999;
+  border: 1px solid var(--green-dark);
+  border-radius: 12px;
+  padding: 10px;
+  background: var(--yellow);
+  margin: -75px 150px;
+  font-size: 12px;
+  opacity: 0;
+  color: var(--green-dark);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tips::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: -6px;
+  border-left: 40px solid var(--yellow);
+  border-bottom: 15px solid transparent;
+}
+
+#card:hover .tips {
+  opacity: 0.7;
+}
+
 .card-photo {
   width: 100%;
   height: 239px;
@@ -172,7 +204,7 @@ header {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 4px solid #f7dd43;
+  border: 4px solid var(--yellow);
   box-shadow: 0 3px 15px -2px #000000;
 }
 
